@@ -1,7 +1,10 @@
 package com.example.android.miwok;
 
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -24,5 +27,10 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("eight");
         words.add("nine");
         words.add("ten");
+
+        ConstraintLayout rootView = (ConstraintLayout) findViewById(R.id.rootView);
+        TextView wordView = new TextView(this);
+        wordView.setText(words.get(0));
+        rootView.addView(wordView);
     }
 }
